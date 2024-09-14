@@ -20,6 +20,8 @@ body {
     overflow-x: hidden;
 }
 
+/* TOPO DO SITE */
+
 header {
     height: 100px;
     background-color: black;
@@ -27,11 +29,11 @@ header {
 }
 
 .header {
-    max-width: 1140px;
     height: 100px;
     margin: auto;
     display: flex;
     align-items: center;
+    max-width: 1140px;
 }
 
 .logo {
@@ -42,7 +44,7 @@ header {
     margin: auto;
 }
 
-.logoimg span{
+.logoimg span {
     color: var(--cp--color);
 }
 
@@ -79,6 +81,13 @@ header {
     ;
     color: rgb(160, 160, 160);
 }
+
+.btn-abrir-menu i {
+    display: none;
+}
+
+
+/* BANNER */
 
 .banner {
     height: calc(100vh - 100px);
@@ -127,25 +136,6 @@ header {
     text-align: center;
 }
 
-.banner button,
-.sobre-esquerda button {
-    margin-top: 30px;
-    padding: 15px 35px;
-    border-radius: 25px;
-    background-color: var(--cp--color);
-    border: none;
-}
-
-.banner button a,
-.sobre-esquerda button a {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: white;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 700;
-    font-size: 0.9em;
-}
-
 .banner .sliders-pointers {
     width: 100vw;
     height: 20px;
@@ -169,10 +159,47 @@ header {
     background-color: var(--cp--color);
 }
 
-.padrao {
+/* BOTÕES */
 
+.banner button,
+.sobre-esquerda button,
+footer button {
+    margin-top: 30px;
+    padding: 15px 35px;
+    border-radius: 25px;
+    background-color: var(--cp--color);
+    border: none;
+}
+
+.banner button:hover,
+.sobre-esquerda button:hover,
+footer button:hover {
+    transform: scale(1.2);
+    background-color: #116883;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.banner button a,
+.sobre-esquerda button a,
+footer button a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 0.9em;
+}
+
+/* SECTIONS */
+
+.padrao {
     width: 100vw;
     padding: 50px;
+}
+
+.corpo {
+    max-width: 1140px;
 }
 
 .padrao .titulo,
@@ -194,7 +221,6 @@ header {
 }
 
 .padrao .corpo {
-    max-width: 1140px;
     margin: auto;
 }
 
@@ -216,7 +242,7 @@ header {
     color: white;
 }
 
-/* ESPECIFICAÇÕES SEÇÕES */
+/* SOBRE */
 
 .sobre {
     display: flex;
@@ -241,21 +267,40 @@ header {
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.662);
 }
 
+/* TECNOLOGIAS */
+
 .tecnologias {
     display: flex;
+    margin-top: 70px;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .tecnologia {
-    margin-top: 50px;
-    flex: 1;
-    text-align: center;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    margin-right: 50px;
 }
 
-.tecnologias h3 {
+.imagem-logo{
+    display: flex;
+}
+
+.titulo-logo{
+    display: flex;
+}
+
+.tecnologia h3 {
     margin-top: 10px;
     margin-bottom: 50px;
     font-size: 1.1em;
 }
+
+/* PORTFOLIO */
 
 .portfolio {
     display: flex;
@@ -265,7 +310,6 @@ header {
 .portfolio .conteudo {
     display: flex;
     width: 100vw;
-    max-width: 1140px;
     flex-flow: row wrap;
     justify-content: center;
 }
@@ -273,11 +317,88 @@ header {
 .portfolio video {
     width: 400px;
     height: 600px;
-    margin-right: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.213);
 }
 
 .portfolio img {
     width: 400px;
     height: 600px;
     margin-right: 10px;
+}
+
+/* FOOTER */
+
+footer {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .corpo-footer {
+    display: flex;
+    max-width: 1140px;
+    justify-content: center;
+    align-items: center;
+}
+
+.esquerda,
+.meio,
+.direita {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    color: white;
+    margin-left: 70px;
+    height: 123px;
+}
+
+.esquerda {
+    flex-direction: column;
+}
+
+.meio .texto {
+    display: flex;
+}
+
+.meio .texto p {
+    display: flex;
+}
+
+.esquerda .redes {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.818);
+    width: 100px;
+    border-radius: 40px;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.logo-redes {
+    display: flex;
+}
+
+.logo-redes img {
+    flex: 1;
+    margin-right: 5px;
+}
+
+.logo-redes img:hover {
+    transform: scale(1.15);
+    cursor: pointer;
+    background-color: #1795ba;
+    border-radius: 40px;
+    transition: .5s;
+}
+
+.copy {
+    display: flex;
+}
+
+.copy p {
+    color: white;
+    margin-top: 60px;
 }
